@@ -1,39 +1,29 @@
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
-#include <stdlib.h>
 
 int main()
 {
-    char str_bin[12];
-    scanf("%s", str_bin);
+    char str[2000];
+    scanf("%[^\n]s", str);
 
-    int bin[12];
-    int decimal = 0;
+    int word_size = 0;
+    int greatest = 0;
 
-    for (int i = 0; i <= strlen(str_bin); i++)
+    for (int i = 0; str[i] != '\0'; i++)
     {
-        if (str_bin[i] == '0')
+        while (str[i] != ' ' && str[i + 1] != '\n' && str[i] != '.')
         {
-            bin[i] = 0;
+            word_size++;
+            i++;
         }
-        else
+        if (word_size > greatest)
         {
-            bin[i] = 1;
+            greatest = word_size;
         }
+        word_size = 0;
     }
 
-    for (int i = strlen(str_bin) - 1; i >= 1; i--)
-    {
-        decimal += bin[i] * pow(2, strlen(str_bin) - 1 - i);
-    }
-
-    if (bin[0] == 1)
-    {
-        decimal = decimal * -1;
-    }
-
-    printf("%d\n", decimal);
+    printf("%d\n", greatest);
 
     return 0;
 }
