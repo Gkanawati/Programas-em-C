@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[])
+{
 
     int *a, b;
 
@@ -9,7 +10,6 @@ int main(int argc, char *argv[]){
 
     b--;
     printf("%d", *a);
-
 
     return 0;
 }

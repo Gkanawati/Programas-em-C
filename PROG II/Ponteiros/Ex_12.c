@@ -9,18 +9,16 @@ int main()
 
     a = f1();
     if (a == NULL)
-    {
         printf("Nao foi possivel alocar memoria!");
-    }
 
+    for (i = 0; i < 3; i++) {
+        *a = i + 1;
+        a++;
+    }
+    a = a - 3;
     for (i = 0; i < 3; i++)
     {
-        a[i] = i + 1;
-    }
-
-    for (i = 0; i < 3; i++)
-    {
-        printf("%d ", a[i]);
+        printf("%d ", *(a + i));
     }
 
     return 0;
@@ -34,6 +32,5 @@ int* f1()
     {
         return NULL;
     }
-
     return p;
 }
