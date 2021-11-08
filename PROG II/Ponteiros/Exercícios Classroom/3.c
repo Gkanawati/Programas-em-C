@@ -8,7 +8,7 @@ int main() {
     printf("Digite os valores de A, B e C: ");
     scanf("%d %d %d", &a, &b, &c);
     func(a, b, c, &return_maior, &return_medio, &return_menor);
-    printf("Maior(C): %d\nMedio(B): %d\nMenor(A): %d\n", return_maior, return_medio, return_menor);
+    printf("Menor(A): %d\nMedio(B): %d\nMaior(C): %d\n", return_menor, return_medio, return_maior);
     return 0;
 }
 
