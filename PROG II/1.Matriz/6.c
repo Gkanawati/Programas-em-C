@@ -3,7 +3,7 @@
 
 int main(){
 
-   char vetStrings[3][100];
+  char  vetStrings[3][100];
    int i;
 
    strcpy(vetStrings[0], "Joao");
