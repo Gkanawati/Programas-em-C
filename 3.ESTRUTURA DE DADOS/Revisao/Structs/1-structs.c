@@ -32,7 +32,8 @@ void main()
     // declaração de um ponteiro para struct
     struct retangulo *r2;
     r2 = (struct retangulo *)malloc(sizeof(struct retangulo));
-    r2->largura = 20; // (*r2).largura = 20
+    // Utiliza-se a seta para alterar o conteudo do ponteiroc
+    r2->largura = 20; // (*r2).largura = 20 é a mesma coisa que utilizar a seta
     r2->altura = 10;
 
     // declaração de um ponteiro recebendo o endereço de uma struct estática.
@@ -55,7 +56,7 @@ void main()
 
     for (int i = 0; i < 2; i++)
     {
-        alloc_vet_r4[i].altura = 300.f + i;
+        alloc_vet_r4[i].altura = 300.f + i; // nao usa seta pq quando se especifica o indice, ja esta referenciando o conteudo do ponteiro.
         alloc_vet_r4[i].largura = 300.f + i;
     }
 
