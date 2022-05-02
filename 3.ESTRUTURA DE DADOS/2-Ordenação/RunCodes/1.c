@@ -36,8 +36,8 @@ void ordemTamanho(char **matrix, int size)
 
             if (lenMaior < lenAux)
             {
-                matrix[i] = matrix[j];
                 aux = matrix[i];
+                matrix[i] = matrix[j];
                 matrix[j] = aux;
             }
         }
