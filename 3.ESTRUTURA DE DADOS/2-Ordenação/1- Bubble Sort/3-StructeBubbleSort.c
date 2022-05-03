@@ -42,11 +42,12 @@ int main()
     vetor[2].Bola_de_Ouro = 0;
     vetor[2].titulos = 37;
 
-    printf("\n\nSelecione o Metodo de Ordenacao: \n");
+    printf("\nSelecione o Metodo de Ordenacao: \n");
     printf("1 - Ordenar por Gols\n");
     printf("2 - Ordenar por Bolas de Ouro\n");
     printf("3 - Ordenar por Titulos\n");
     printf("4 - Ordenar por Nome\n");
+    printf("\n");
     scanf("%d", &option);
 
     switch (option)
