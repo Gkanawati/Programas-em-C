@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <sys/time.h>
 
+/* MERGE É DIVIDIR E CONQUISTAR */
+/* Nesse algoritmo de ordenação, o vetor é dividido em subvetores com a
+metade do tamanho original por meio de um procedimento recursivo. */
+
 void Merge(int *A, int *L, int letftCount, int *R, int rightCount)
 {
     int i, j, k;
