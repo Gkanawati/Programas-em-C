@@ -61,7 +61,7 @@ int main()
 {
     int tam = 3;
     struct pessoa *vetor = (struct pessoa *)
-        malloc(sizeof(struct pessoa) * 3);
+        malloc(sizeof(struct pessoa) * tam);
 
     vetor[0].id = 5;
     strcpy(vetor[0].nome, "B");
