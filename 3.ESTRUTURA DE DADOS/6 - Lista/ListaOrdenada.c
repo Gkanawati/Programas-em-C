@@ -133,6 +133,7 @@ int remover(struct Lista *lista, int dado)
     struct node *aux;
     struct node *ant;
     int qtdDel = 0;
+    int count = 0;
 
     aux = lista->inicio;
     ant = NULL;
@@ -146,8 +147,10 @@ int remover(struct Lista *lista, int dado)
     {
         while (aux != NULL)
         {
+            count++;
             if (aux->dado > dado)
             {
+                printf("\nVEZES RODADAS: %d\n", count);
                 return qtdDel;
             }
             else if (aux->dado == dado)
@@ -180,7 +183,7 @@ int remover(struct Lista *lista, int dado)
             }
         }
     }
-
+    printf("\nVEZES RODADAS: %d\n", count);
     return qtdDel;
 }
 
