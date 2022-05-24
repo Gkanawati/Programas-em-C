@@ -1,7 +1,9 @@
 {
   "files.associations": {
     "1.C": "cpp",
-    "respostapaulo": "c"
+    "respostapaulo": "c",
+    "stdlib.h": "c",
+    "LAST_DANCE.C": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
