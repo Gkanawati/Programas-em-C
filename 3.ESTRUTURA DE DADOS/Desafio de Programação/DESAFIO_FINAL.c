@@ -213,7 +213,7 @@ struct node *encontrarPonto(Pilha *p1, Pilha *p2)
 {
     struct node *end1 = pop(p1);
     struct node *end2 = pop(p2);
-    struct node *tempo = end1->dado;
+    struct node *tempo = end1;
 
     while (end1 == end2)
     {
