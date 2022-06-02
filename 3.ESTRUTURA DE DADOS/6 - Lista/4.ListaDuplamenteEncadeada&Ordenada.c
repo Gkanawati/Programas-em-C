@@ -19,6 +19,7 @@ int inserir(struct Lista *lista, int dado);
 int inserirFim(struct Lista *lista, int dado);
 int mostrar(struct Lista lista);
 int remover(struct Lista *lista, int dado);
+int imprimeAntesDoFinal(struct Lista lista, int dado);
 int menu();
 
 int main()
@@ -33,15 +34,35 @@ int main()
     inserir(&lista, 5);
     inserir(&lista, 1);
 
+    printf("Lista Completa: \n");
     mostrar(lista);
 
-    remover(&lista, 5);
+    imprimeAntesDoFinal(lista, 3);
+    imprimeAntesDoFinal(lista, 2);
+    imprimeAntesDoFinal(lista, 1);
+
+    /* remover(&lista, 5);
     remover(&lista, 6);
-    remover(&lista, 1);
-
-    mostrar(lista);
+    remover(&lista, 1); */
 
     return 0;
+}
+
+int imprimeAntesDoFinal(struct Lista lista, int dado)
+{
+    int cont = 0;
+    struct node *aux;
+
+    printf("\nMostrando os numeros antes do final: \n");
+    aux = lista.fim;
+    while (dado != 0)
+    {
+        aux = aux->ant;
+        printf("%d ", aux->dado);
+        dado--;
+    }
+
+    return 1;
 }
 
 void inicializar(struct Lista *lista)
