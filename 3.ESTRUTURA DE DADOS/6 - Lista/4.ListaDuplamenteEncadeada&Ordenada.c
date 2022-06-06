@@ -41,9 +41,12 @@ int main()
     imprimeAntesDoFinal(lista, 2);
     imprimeAntesDoFinal(lista, 1);
 
-    /* remover(&lista, 5);
+    remover(&lista, 5);
     remover(&lista, 6);
-    remover(&lista, 1); */
+    remover(&lista, 1);
+
+    printf("Lista Completa: \n");
+    mostrar(lista);
 
     return 0;
 }
