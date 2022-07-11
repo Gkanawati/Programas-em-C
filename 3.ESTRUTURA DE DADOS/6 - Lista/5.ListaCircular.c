@@ -27,6 +27,8 @@ int main()
     inicializar(&lista);
 
     inserirInicio(&lista, 1);
+    inserirInicio(&lista, 3);
+    inserirInicio(&lista, 1);
     inserirInicio(&lista, 2);
     inserirInicio(&lista, 3);
     inserirFim(&lista, 4);
@@ -101,13 +103,14 @@ int remover(struct Lista *lista, int dado)
 {
     struct node *aux;
     struct node *ant;
-    int qtdDel = 0;
+    int qtdDel = 0, i = 0;
 
     aux = lista->inicio;
     ant = NULL;
 
     do
     {
+        i++;
         if (aux->dado == dado)
         {
             qtdDel++;
@@ -137,7 +140,7 @@ int remover(struct Lista *lista, int dado)
             ant = aux;
             aux = aux->prox;
         }
-    } while (aux != lista->inicio);
+    } while (ant != lista->fim);
 
     return qtdDel;
 }
